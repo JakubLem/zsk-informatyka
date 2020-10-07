@@ -1,4 +1,3 @@
-
 def zad41(data):
     result = str("")
     for i in range(39, len(data), 40):
@@ -72,16 +71,36 @@ def zad42(data):
     return result
 
 
+
+def zad43(data):
+    def wordCheck(word):
+        char = word[0]
+        for i in range(1,len(word),1):
+            if abs(ord(word[i-1])-ord(word[i])) > 10:
+                return False
+        return True
+    result = list()
+    for i in range(len(data)):
+        if wordCheck(data[i]):
+            result.append(data[i])
+    return result
+
 def main():
     przyklad = "/home/jakub/C/School/ZSK-4D/zsk-informatyka/src/lessons/lesson3/data/informatyka-2018-maj-matura-rozszerzona-zalaczniki/Dane_PR/przyklad.txt"
     path = "/home/jakub/C/School/ZSK-4D/zsk-informatyka/src/lessons/lesson3/data/informatyka-2018-maj-matura-rozszerzona-zalaczniki/Dane_PR/sygnaly.txt"
     data = open(path, "r", encoding="utf-8").read().splitlines()
     
+    res1 = zad41(data)
+    res2 = zad42(data)
+    res3 = zad43(data)
 
-    print(zad41(data))
-    print(zad42(data))
+    print("Zadanie 4.1:", res1)
+    print("Zadanie 4.2:", res2)
+    print("Zadanie 4.3:")
 
-    # TODO zad3
+    for i in range(len(res3)):
+        print(res3[i])
+
 
 if __name__ == "__main__":
     main()
