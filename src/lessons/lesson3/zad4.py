@@ -81,5 +81,7 @@ def main():
     print(zad41(data))
     print(zad42(data))
 
+    # TODO zad3
+
 if __name__ == "__main__":
     main()
