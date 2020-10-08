@@ -74,7 +74,6 @@ def zad42(data):
 
 def zad43(data):
     def wordCheck(word):
-        char = word[0]
         for i in range(1,len(word),1):
             if abs(ord(word[i-1])-ord(word[i])) > 10:
                 return False
