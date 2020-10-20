@@ -57,7 +57,8 @@ def zad21(n, x, y):
 
 def zad22(n, x, y):
     for i in range(1, n, 1):
-        k = x[i]/y[i]
+        kx = x[i]
+        ky  = y[i]
         j = i - 1
         while j > -1 and x[j]/y[j] > k:
             x[j + 1] = x[j]
