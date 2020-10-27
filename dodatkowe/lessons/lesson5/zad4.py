@@ -10,6 +10,7 @@ class Punkt:
         return f'{self.x, self.y}'
 
 def zad1(points):
+    # TODO
     pass
 
 def main():
